@@ -305,6 +305,7 @@ public class HospitalSearchController implements Initializable{
                 filteredDatabase.reset(filteredDatabase.INORDER);
                 for(int i = 0; i < filteredDatabase.size(); i++) {
                     Hospital nextHospital = filteredDatabase.getNext(filteredDatabase.INORDER);
+                    nextHospital.setPathDistance(nextHospital.getRadius());
                     tableHospitals.getItems().add(nextHospital);
                 }
             }
